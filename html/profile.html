@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    let request = new XMLHttpRequest();
+        request.open('GET', 'https://randomuser.me/api/', true);
+        request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+            let data = JSON.parse(request.responseText);
+            let firstName = data.results[0].name.first;
+            let lastName = data.results[0].name.last;
+            
+            // Update placeholder content with name, email, avatar from API
+            card.firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+            card.lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+            card.avatar = data.results[0].picture.large;
+            card.email = data.results[0].email;
+          } else {
+            console.log('Couldn\'t get data, server error ' + request.status);
+          }
+        };
+        request.send();
+        
+        /*
+         * Vue instance for card component
+         */
+        
+        function editContent(): {
+          window.location = readinglog.html;
+        }  
+        
+        </script>
+    <title>Page Title</title>
+    <style> 
+    body{
+      background-color:cadetblue;
+      text-align: center;
+      padding: 300px;
+
+    }
+    .card-button{
+      background-color:darkolivegreen;
+      color: white;
+    }
+    .card-bio, .card-name{
+      color: white ;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div id="card" v-bind:class="cardStates" class="card">
+      <div class="card-info">
+        <div class="card-image">
+          <img v-bind:src="avatar" class="card-avatar card-avatar--circle">
+        </div>
+        <div class="card-fields">
+          <h2 v-show="!isEditing" class="card-name">Name</h2>
+          <input v-show="isEditing" v-model="firstName" type="text" class="card-input card-input--inline" >
+         
+        </div>
+        <div class="card-fields">
+          
+        
+      </div>
+      <div class="card-shelf" v-bind:class="shelfIsOpen">
+        <div class="card-content">
+          <div class="card-fields">
+            <h2 v-show="!isEditing" class="card-bio">Bio</h2>
+            <textarea v-show="isEditing" v-model="bio" class="card-input" ></textarea>      
+          </div>
+        </div>
+      </div>
+      <span> </span>
+      <span> </span>
+      <br>
+      <button v-on:click="editContent" class="card-button card-edit">
+       
+        <i v-show="isEditing" class="material-icons" aria-hidden="true">save</i>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

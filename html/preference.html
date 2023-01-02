@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color:cadetblue;
+        padding: 200;
+        color: white;
+        margin-left: 800px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:large;
+      }
+      .button2{
+        color: white;
+        background-color:darkolivegreen ;
+      }
+      h2{
+        margin-left: -50px;
+      }
+    </style>
+  </head>
+<body>
+
+<h2>Select your favorite genres</h2>
+
+<form action="/action_page.php">
+   <input type="checkbox" id="genre" name="genre" value="fantasy">
+  <label for="genre"> Fantasy</label><br>
+   <input type="checkbox" id="genre" name="genre" value="action and adventure">
+  <label for="genre"> Action and Adventure </label><br>
+   <input type="checkbox" id="genre" name="genre" value="science fiction">
+  <label for="genre"> Science Fiction </label><br>
+   <input type="checkbox" id="genre" name="genre" value="romance">
+  <label for="genre"> Romance </label><br>
+   <input type="checkbox" id="genre" name="genre" value="contemporary">
+  <label for="genre"> Contemporary </label><br>
+   <input type="checkbox" id="genre" name="genre" value="thrillers">
+  <label for="genre"> Thrillers </label><br>
+   <input type="checkbox" id="genre" name="genre" value="mysteries">
+  <label for="genre"> Mysteries </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Classics">
+  <label for="genre"> Classics </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Comics">
+  <label for="genre"> Comics </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Graphic Novels">
+  <label for="genre"> Graphic Novels </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Historical Fiction">
+  <label for="genre"> Historical Fiction </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Horror">
+  <label for="genre"> Horror </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Biographies">
+  <label for="genre"> Biographies </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Autobiographies">
+  <label for="genre"> Autobiographies </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Poetry">
+  <label for="genre"> Poetry </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Nonfiction">
+  <label for="genre"> Cooking </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Drama">
+  <label for="genre"> Drama </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Dystopian">
+  <label for="genre"> Dystopian </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Paranormal">
+  <label for="genre"> Paranormal </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Memoir">
+  <label for="genre"> Memoir </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Art">
+  <label for="genre"> Art </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Motivational">
+  <label for="genre"> Motivational </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Health">
+  <label for="genre"> Health </label><br>
+   <input type="checkbox" id="genre" name="genre" value="History">
+  <label for="genre"> History </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Guide/How-to">
+  <label for="genre"> Guide/How-to </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Travel">
+  <label for="genre"> Travel </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Nonfiction">
+  <label for="genre"> Nonfiction </label><br>
+   <input type="checkbox" id="genre" name="genre" value="Families and Relationships">
+  <label for="genre"> Families and Relationships </label><br>
+   <input type="checkbox" id="genre" name="genre" value="all">
+  <label for="genre"> All </label><br>
+  
+
+<h2> Select an age group </h2>
+
+<form action="/action_page.php">
+   <input type="checkbox" id="age group" name="age group" value="Picture books">
+  <label for="age group"> Picture Books (ages 3-5) </label><br>
+   <input type="checkbox" id="age group" name="age group" value="first chapter books">
+  <label for="age group"> First Chapter Books (ages 5-8) </label><br>
+   <input type="checkbox" id="age group" name="age group" value="middle grade books">
+  <label for="age group"> Middle Grade Books (ages 8-13) </label><br>
+    <input type="checkbox" id="age group" name="age group" value="YA books">
+  <label for="age group"> Young Adult Books (ages 13-18) </label><br>
+    <input type="checkbox" id="age group" name="age group" value="NA books">
+  <label for="age group"> New Adult Books (ages 18-25) </label><br>
+    <input type="checkbox" id="age group" name="age group" value="Adult books">
+  <label for="age group"> Adult Books (ages 18+) </label><br><br>
+  <input onclick = "savepreference()" class="button2" type="submit" value="Submit">
+</form>
+
+
+<script>
+ function savepreference() {
+   window.location = profile.html ; 
+ }
+</script>
+
+</body>
+</html>

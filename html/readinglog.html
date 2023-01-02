@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <style>
+    body{
+      background-color: cadetblue;
+      color: white;
+      text-align: center;
+      padding-top: 250px;
+    }
+    .submit2{
+      background-color: darkolivegreen;
+      color: white;
+    }
+
+
+  </style>
+
+<h2> Reading Log </h2>
+
+<form>
+  <label for="fname">Time:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br><br>
+  <label for="lname">Pages:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <label for="lname">Book Title:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <label for="lname">Author:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input onclick = "savebook()" class = "submit2" type="submit" value="save">
+   <input onclick = "savelog()" class = "submit2" type="submit" value="edit"><br><br><br>
+</form>
+
+ <input class = "submit2" type="submit" value="started a book today"><br><br>
+  <input class = "submit2" type="submit" value="finished a book today"><br>
+
+ <script>
+   function savebook() {
+     window.location = calendar.html
+   } 
+   function savelog() {
+     window.location = readinglog.html 
+   }
+   </script>
+
+</body>
+</html>

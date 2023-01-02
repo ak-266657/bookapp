@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .button {
+  position: relative;
+  background-color: #808000;
+  border: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #808000;
+  display: block;
+  position: absolute;
+  padding-top: 200%;
+  -left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+padding
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+    </style>
+    <script>function removeElement(divNum,elId) {
+        var holder = document.getElementById(elId);
+        var olddiv = document.getElementById(divNum);
+        olddiv.className = "";
+        
+        setTimeout(function() {
+            holder.removeChild(olddiv);
+        }, 600);
+    } 
+    function addElement(elId,e) {
+    var holder = document.getElementById(elId),
+        num = e.currentTarget.dataset.count++,
+        divIdName = elId + num,
+        newdiv = document.createElement('div');
+
+    newdiv.setAttribute("id", divIdName);
+    newdiv.innerHTML = "<textarea class=\"form-control\" name=\"text" + num + "\"></textarea><a href=\"javascript:;\" onclick=\"removeElement(\'" + divIdName + "\',\'" + elId + "\')\">Remove</a>";
+
+    holder.appendChild(newdiv);
+    setTimeout(function() {
+        newdiv.className += "show";
+    }, 10);
+}
+    </script>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Notes</h1>
+<p>Here you can keep track of all of your annotations.</p>
+
+<button data-count="0" onclick="addElement('swingX',event);" class="button">Add</button>
+<div class="swingX" id="swingX"></div>
+
+</body>
+</html>
